@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>JCY</title>
+<!-- Site styles -->
+<link href="stylesheets/style.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="javascripts/jquery.js"></script> 
+<script type="text/javascript">
+function switchbox(a) {
+    a == 1 ? $(".slide.slide3 .arrowcontainer").show() : $(".slide.slide3 .arrowcontainer").hide(),
+    $(".slide.slide3").removeClass("s1").removeClass("s2").removeClass("s3").removeClass("s4").removeClass("s5"),
+    $(".slide.slide3").addClass("s" + a),
+    $(".slide.slide3 .img" + a).addClass("selected"),
+    $(".slide.slide3 .content").hide(),
+    $(".slide.slide3 .content.content" + a).show(),
+    $(".slide.slide3 .bgimg").remove()
+}
+</script>
+
+</head>
+<body class="slide slide3 s1">
+
+<div id="demo">
+	<div class="pane"> 
+		<div class="cont"></div> 
+				<div class="icons">
+			<a onclick="switchbox(1);" href="javascript:void(0);"><img class="img1 selected" alt="" src="images/icon.png"></a> 
+			<a onclick="switchbox(2);" href="javascript:void(0);"><img alt="" class="img2" src="images/icon2.png"> </a> 
+			<a onclick="switchbox(3);" href="javascript:void(0);"><img alt="" class="img3" src="images/icon5.png"></a> 
+			<a onclick="switchbox(4);" href="javascript:void(0);"><img alt="" class="img4" src="images/icon4.png"> </a> 
+			<a onclick="switchbox(5);" href="javascript:void(0);"><img alt="" class="img5" src="images/icon3.png"></a> 
+		</div> 
+	</div> 
+</div>
+<div style="text-align:center;">
+</div>
+
+</body>
+</html>
